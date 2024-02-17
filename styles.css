@@ -1,5 +1,5 @@
 :root {
-  --avatar-background-image: url();
+  --avatar-background-image: url(./image//channels4_profile.jpg);
 }
 
 * {
@@ -13,4 +13,7 @@ body {
   width: 100px;
   height: 100px;
   border-radius: 100%;
+  background-image: var(--avatar-background-image);
+  background-size: cover;
+  background-position: center;
 }
