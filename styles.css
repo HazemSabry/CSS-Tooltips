@@ -1,5 +1,7 @@
 :root {
   --avatar-background-image: url(./image//channels4_profile.jpg);
+  --tooltip-background-color: black;
+  --tooltip-text-color: white;
 }
 
 * {
@@ -21,4 +23,19 @@ body {
   background-image: var(--avatar-background-image);
   background-size: cover;
   background-position: center;
+  position: relative;
+  transition: all 1s;
+}
+
+.avatar:hover::before {
+  content: attr(data-tooltip);
+  background-color: var(--tooltip-background-color);
+  color: var(--tooltip-text-color);
+  width: max-content;
+  position: absolute;
+  top: -0.25rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+  padding: 0.5rem;
+  border-radius: 10px;
 }
